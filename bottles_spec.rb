@@ -8,7 +8,8 @@ class BottlesTest < Minitest::Test
   def test_the_first_verse
     expected = "99 bottles of beer on the wall, " +
       "99 bottles of beer.\n" +
-      "Take one down and pass it around, " + "98 bottles of beer on the wall.\n"
+      "Take one down and pass it around, " +
+      "98 bottles of beer on the wall.\n"
     assert_equal expected, Bottles.new.verse(99)
   end
 
@@ -42,5 +43,18 @@ class BottlesTest < Minitest::Test
       "Go to the store and buy some more, " +
       "99 bottles of beer on the wall.\n"
     assert_equal expected, Bottles.new.verse(0)
-  end 
+  end
+
+  def test_two_verses
+    expected = "99 bottles of beer on the wall, " +
+      "99 bottles of beer.\n" +
+      "Take one down and pass it around, " +
+      "98 bottles of beer on the wall.\n" +
+      "\n" +
+      "98 bottles of beer on the wall, " +
+      "98 bottles of beer.\n" +
+      "Take one down and pass it around, " +
+      "97 bottles of beer on the wall.\n"
+    assert_equal expected, Bottles.new.verses(99, 98)
+  end
 end
