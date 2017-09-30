@@ -48,8 +48,12 @@ class Bottles
     end
   end
 
-  def quantity
-    "no more"
+  def quantity(number=0)
+    if number == 0
+      "no more"
+    else
+      number
+    end
   end
 
 end
