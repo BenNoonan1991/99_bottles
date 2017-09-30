@@ -6,11 +6,6 @@ class Bottles
       "no more bottles of beer.\n" +
       "Go to the store and buy some more, " +
       "99 bottles of beer on the wall.\n"
-    when 1
-      "#{number} #{container(number)} of beer on the wall, " +
-      "#{number} #{container(number)} of beer.\n" +
-      "Take #{pronoun(number)} down and pass it around, " +
-      "#{quantity} #{container(number-1)} of beer on the wall.\n"
     when 2
       "#{number} bottles of beer on the wall, " +
       "#{number} bottles of beer.\n" +
@@ -20,7 +15,7 @@ class Bottles
       "#{number} #{container(number)} of beer on the wall, " +
       "#{number} #{container(number)} of beer.\n" +
       "Take #{pronoun(number)} down and pass it around, " +
-      "#{number-1} #{container(number-1)} of beer on the wall.\n"
+      "#{quantity(number-1)} #{container(number-1)} of beer on the wall.\n"
     end
   end
 
@@ -48,7 +43,7 @@ class Bottles
     end
   end
 
-  def quantity(number=0)
+  def quantity(number)
     if number == 0
       "no more"
     else
