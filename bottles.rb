@@ -71,4 +71,7 @@ class BottleNumber
     "#{quantity} #{container}"
   end
 
+  class BottleNumber0 < BottleNumber
+  end 
+
 end
