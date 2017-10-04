@@ -19,7 +19,11 @@ class Bottles
   end
 
   def bottle_number_for(number)
-    BottleNumber.new(number)
+    if number == 0
+      BottleNumber0
+    else
+      BottleNumber
+    end.new(number)
   end
 
 end
@@ -74,13 +78,12 @@ class BottleNumber
   def to_s
     "#{quantity} #{container}"
   end
+end
 
-  class BottleNumber0 < BottleNumber
+class BottleNumber0 < BottleNumber
 
-    def quantity
-        "no more"
-    end
-
+  def quantity
+    "no more"
   end
 
 end
