@@ -80,6 +80,18 @@ class BottleNumber0 < BottleNumber
 
   def successor
     99
-  end 
+  end
+
+end
+
+class BottleNumber1 < BottleNumber
+
+  def container
+    if number == 1
+      "bottle"
+    else
+      "bottles"
+    end
+  end
 
 end
