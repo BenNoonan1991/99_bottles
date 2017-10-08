@@ -75,7 +75,21 @@ class BottlesTest < Minitest::Test
       "99 bottles of beer on the wall.\n"
     assert_equal expected, Bottles.new.verses(2, 0)
   end
-end 
+
+
+  def test_6_to_7
+    expected = "7 bottles of beer on the wall, " +
+      "7 bottles of beer.\n" +
+      "Take one down and pass it around, " +
+      "1 six-pack of beer on the wall.\n" +
+      "\n" +
+      "1 six-pack of beer on the wall, " +
+      "1 six-pack of beer.\n" +
+      "Take one down and pass it around, " +
+      "5 bottles of beer on the wall.\n"
+    assert_equal expected, Bottles.new.verses(7, 6)
+  end
+end
 
 #   def test_song
 #     expected = <<-SONG
